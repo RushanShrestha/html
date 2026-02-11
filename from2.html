@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Form</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #002fff, #240d3c);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: rgb(200, 185, 185);
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      width: 350px;
+    }
+
+    .card h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      color: #444;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+      width: 100%;
+      padding: 8px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    input[type="text"]:focus,
+    input[type="number"]:focus {
+      border-color: #667eea;
+      box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+    }
+
+    .radio-group {
+      margin-top: 5px;
+    }
+
+    .radio-group label {
+      font-weight: normal;
+      display: inline;
+      margin-right: 10px;
+    }
+
+    .btn {
+      margin-top: 20px;
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      background: #667eea;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #5a67d8;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Student Form</h1>
+
+    <form action="form.html" method="post">
+      
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="class">Class</label>
+      <input type="text" id="class" name="class" required>
+
+      <label for="semester">Semester</label>
+      <input type="text" id="semester" name="semester" required>
+
+      <label>Section</label>
+      <div class="radio-group">
+        <input type="radio" name="section" value="A" required> <label>A</label>
+        <input type="radio" name="section" value="B"> <label>B</label>
+        <input type="radio" name="section" value="C"> <label>C</label>
+      </div>
+
+      <label for="roll">Roll No</label>
+      <input type="number" id="roll" name="roll" required>
+
+      <button type="submit" class="btn">Submit</button>
+    
+    </form>
+  </div>
+
+</body>
+</html>
